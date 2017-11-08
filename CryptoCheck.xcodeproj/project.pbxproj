@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0349B4BB1FB18FAF0076F8E7 /* SetupCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349B4BA1FB18FAF0076F8E7 /* SetupCurrencyCell.swift */; };
+		03610A7B1FAA34490009D312 /* MPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A7A1FAA34490009D312 /* MPageVC.swift */; };
+		03610A7D1FAA3DEE0009D312 /* MSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A7C1FAA3DEE0009D312 /* MSetupVC.swift */; };
+		03610A7F1FAA3F0A0009D312 /* MDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A7E1FAA3F0A0009D312 /* MDashboardVC.swift */; };
+		03610A811FAA3F8D0009D312 /* MCurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A801FAA3F8D0009D312 /* MCurrencyVC.swift */; };
+		03610A831FAA454C0009D312 /* MTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A821FAA454C0009D312 /* MTabBarVC.swift */; };
+		03610A871FB14CD30009D312 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A861FB14CD30009D312 /* CryptoModel.swift */; };
+		03610A8B1FB150910009D312 /* MSetupCurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A8A1FB150910009D312 /* MSetupCurrencyVC.swift */; };
+		03610A8D1FB159EB0009D312 /* CryptoCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A8C1FB159EB0009D312 /* CryptoCompare.swift */; };
+		038DA9981FB2682300811AD2 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038DA9971FB2682300811AD2 /* Utility.swift */; };
+		038DA99E1FB2A8EC00811AD2 /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038DA99D1FB2A8EC00811AD2 /* PoolModel.swift */; };
+		038DA9A01FB2A9D600811AD2 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038DA99F1FB2A9D600811AD2 /* ServerModel.swift */; };
+		038DA9A21FB2BF0D00811AD2 /* MSetupPoolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038DA9A11FB2BF0D00811AD2 /* MSetupPoolVC.swift */; };
+		038DA9A41FB2C21700811AD2 /* SetupPoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038DA9A31FB2C21700811AD2 /* SetupPoolCell.swift */; };
 		039DF8FD1F9C245A0003FA18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039DF8FC1F9C245A0003FA18 /* AppDelegate.swift */; };
 		039DF8FF1F9C245A0003FA18 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039DF8FE1F9C245A0003FA18 /* RootViewController.swift */; };
 		039DF9011F9C245A0003FA18 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039DF9001F9C245A0003FA18 /* DataViewController.swift */; };
@@ -36,6 +50,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0349B4BA1FB18FAF0076F8E7 /* SetupCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCurrencyCell.swift; sourceTree = "<group>"; };
+		03610A7A1FAA34490009D312 /* MPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPageVC.swift; sourceTree = "<group>"; };
+		03610A7C1FAA3DEE0009D312 /* MSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSetupVC.swift; sourceTree = "<group>"; };
+		03610A7E1FAA3F0A0009D312 /* MDashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDashboardVC.swift; sourceTree = "<group>"; };
+		03610A801FAA3F8D0009D312 /* MCurrencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCurrencyVC.swift; sourceTree = "<group>"; };
+		03610A821FAA454C0009D312 /* MTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTabBarVC.swift; sourceTree = "<group>"; };
+		03610A861FB14CD30009D312 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		03610A8A1FB150910009D312 /* MSetupCurrencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSetupCurrencyVC.swift; sourceTree = "<group>"; };
+		03610A8C1FB159EB0009D312 /* CryptoCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompare.swift; sourceTree = "<group>"; };
+		038DA9971FB2682300811AD2 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		038DA99D1FB2A8EC00811AD2 /* PoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolModel.swift; sourceTree = "<group>"; };
+		038DA99F1FB2A9D600811AD2 /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
+		038DA9A11FB2BF0D00811AD2 /* MSetupPoolVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSetupPoolVC.swift; sourceTree = "<group>"; };
+		038DA9A31FB2C21700811AD2 /* SetupPoolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPoolCell.swift; sourceTree = "<group>"; };
 		039DF8F91F9C245A0003FA18 /* CryptoCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		039DF8FC1F9C245A0003FA18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		039DF8FE1F9C245A0003FA18 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +106,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03610A891FB14D650009D312 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03610A861FB14CD30009D312 /* CryptoModel.swift */,
+				038DA99D1FB2A8EC00811AD2 /* PoolModel.swift */,
+				038DA99F1FB2A9D600811AD2 /* ServerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		039DF8F01F9C245A0003FA18 = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +139,26 @@
 		039DF8FB1F9C245A0003FA18 /* CryptoCheck */ = {
 			isa = PBXGroup;
 			children = (
+				03610A891FB14D650009D312 /* Models */,
 				039DF8FC1F9C245A0003FA18 /* AppDelegate.swift */,
 				039DF8FE1F9C245A0003FA18 /* RootViewController.swift */,
 				039DF9001F9C245A0003FA18 /* DataViewController.swift */,
 				039DF9021F9C245A0003FA18 /* ModelController.swift */,
 				039DF9041F9C245A0003FA18 /* Main.storyboard */,
+				03610A801FAA3F8D0009D312 /* MCurrencyVC.swift */,
+				03610A7E1FAA3F0A0009D312 /* MDashboardVC.swift */,
 				039DF9071F9C245A0003FA18 /* Assets.xcassets */,
 				039DF9091F9C245A0003FA18 /* LaunchScreen.storyboard */,
 				039DF90C1F9C245A0003FA18 /* Info.plist */,
+				03610A7A1FAA34490009D312 /* MPageVC.swift */,
+				03610A7C1FAA3DEE0009D312 /* MSetupVC.swift */,
+				038DA9971FB2682300811AD2 /* Utility.swift */,
+				03610A821FAA454C0009D312 /* MTabBarVC.swift */,
+				03610A8A1FB150910009D312 /* MSetupCurrencyVC.swift */,
+				03610A8C1FB159EB0009D312 /* CryptoCompare.swift */,
+				0349B4BA1FB18FAF0076F8E7 /* SetupCurrencyCell.swift */,
+				038DA9A11FB2BF0D00811AD2 /* MSetupPoolVC.swift */,
+				038DA9A31FB2C21700811AD2 /* SetupPoolCell.swift */,
 			);
 			path = CryptoCheck;
 			sourceTree = "<group>";
@@ -265,10 +315,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038DA9981FB2682300811AD2 /* Utility.swift in Sources */,
+				03610A7F1FAA3F0A0009D312 /* MDashboardVC.swift in Sources */,
+				03610A7B1FAA34490009D312 /* MPageVC.swift in Sources */,
+				03610A831FAA454C0009D312 /* MTabBarVC.swift in Sources */,
 				039DF8FF1F9C245A0003FA18 /* RootViewController.swift in Sources */,
+				03610A871FB14CD30009D312 /* CryptoModel.swift in Sources */,
+				038DA9A21FB2BF0D00811AD2 /* MSetupPoolVC.swift in Sources */,
+				0349B4BB1FB18FAF0076F8E7 /* SetupCurrencyCell.swift in Sources */,
 				039DF9031F9C245A0003FA18 /* ModelController.swift in Sources */,
 				039DF9011F9C245A0003FA18 /* DataViewController.swift in Sources */,
+				03610A811FAA3F8D0009D312 /* MCurrencyVC.swift in Sources */,
+				038DA9A41FB2C21700811AD2 /* SetupPoolCell.swift in Sources */,
+				03610A8D1FB159EB0009D312 /* CryptoCompare.swift in Sources */,
+				038DA9A01FB2A9D600811AD2 /* ServerModel.swift in Sources */,
+				03610A8B1FB150910009D312 /* MSetupCurrencyVC.swift in Sources */,
 				039DF8FD1F9C245A0003FA18 /* AppDelegate.swift in Sources */,
+				03610A7D1FAA3DEE0009D312 /* MSetupVC.swift in Sources */,
+				038DA99E1FB2A8EC00811AD2 /* PoolModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
