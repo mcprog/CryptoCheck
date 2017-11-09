@@ -1,26 +1,21 @@
 //
-//  MSetupPoolVC.swift
+//  MSetupServerVC.swift
 //  CryptoCheck
 //
-//  Created by Michael Curtis on 11/7/17.
+//  Created by Michael Curtis on 11/8/17.
 //  Copyright © 2017 Michael Curtis. All rights reserved.
 //
 
 import Foundation
 import UIKit
-class MSetupPoolVC: UITableViewController {
+
+class MSetupServerVC: UITableViewController {
     
-    var poolModels: [PoolModel]?
-    var poolNames = [String]()
-    var selectedPool: PoolModel?
+    var serverModels: [ServerModel]?
+    var selectedServer: ServerModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(poolModels)
-        for pool in poolModels! {
-            poolNames.append(pool.name)
-        }
-        tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -28,24 +23,24 @@ class MSetupPoolVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return poolNames.count
+        return (serverModels?.count)!
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "setupPoolCell", for: indexPath) as? SetupPoolCell
-        let data = poolNames[indexPath.row]
-        cell?.nameLabel.text = data
+        let cell = tableView.dequeueReusableCell(withIdentifier: "setupServerCell", for: indexPath) as? SetupServerCell
+        let data = serverModels![indexPath.row]
+        cell?.nameLabel.text = data.name
         return cell!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "unwindFromSetupPool") {
-            let cell = sender as! SetupPoolCell
+        if (segue.identifier == "unwindFromSetupServer") {
+            let cell = sender as! SetupServerCell
             let index = tableView.indexPath(for: cell)
             if let indexPath = index?.row {
-                selectedPool = poolModels?[indexPath]
+                selectedServer = serverModels?[indexPath]
             }
         }
-        
     }
+    
 }

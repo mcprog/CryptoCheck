@@ -20,7 +20,8 @@ class MSetupVC: UITableViewController {
     let defaults = UserDefaults.standard
     
     var pools: [PoolModel]?
-    
+    var selectedPool: PoolModel?
+    var selectedServer: ServerModel?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -47,7 +48,15 @@ class MSetupVC: UITableViewController {
         case 0:
             performSegue(withIdentifier: "showSetupCurrency", sender: self)
         case 1:
+            if pools == nil {
+                return
+            }
             performSegue(withIdentifier: "showSetupPool", sender: self)
+        case 2:
+            if selectedPool == nil {
+                return
+            }
+            performSegue(withIdentifier: "showSetupServer", sender: self)
         default:
             return
         }
@@ -60,6 +69,7 @@ class MSetupVC: UITableViewController {
         currencyLabel.text = message
         
         pools = PoolModel.getPools(suffix: cryptoModel.suffix)
+        
     }
     
     func saveCurrency(cryptoModel: CryptoModel) {
@@ -69,17 +79,45 @@ class MSetupVC: UITableViewController {
         Utility.printUserDefaults()
     }
     
+    func clearCurrency() {
+        iconCurrency.image = nil
+        currencyLabel.text = "please select a currency"
+    }
+    
     func setPool(poolModel: PoolModel) {
         poolLabel.text = poolModel.name
+        selectedPool = poolModel
     }
     
     func savePool(poolModel: PoolModel) {
         defaults.set(poolModel.name, forKey: "poolName")
     }
     
+    func clearPool() {
+        poolLabel.text = "please select a mining pool"
+        selectedPool = nil
+    }
+    
+    func setServer(serverModel: ServerModel) {
+        serverLabel.text = serverModel.name
+        selectedServer = serverModel
+    }
+    
+    func saveServer(serverModel: ServerModel) {
+        defaults.set(serverModel.name, forKey: "serverName")
+    }
+    
+    func clearServer() {
+        serverLabel.text = "please select a server"
+        selectedServer = nil
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let mSetupPoolVC = segue.destination as? MSetupPoolVC {
             mSetupPoolVC.poolModels = pools
+        }
+        else if let mSetupServerVC = segue.destination as? MSetupServerVC {
+            mSetupServerVC.serverModels = selectedPool?.servers
         }
     }
     
@@ -87,7 +125,8 @@ class MSetupVC: UITableViewController {
         let mSetupCurrencyVC = segue.source as? MSetupCurrencyVC
         if let selected = mSetupCurrencyVC?.selectedCurrency {
             setCurrency(cryptoModel: selected)
-            //saveCurrency(cryptoModel: selected)
+            clearPool()
+            clearServer()
         }
     }
     
@@ -95,6 +134,14 @@ class MSetupVC: UITableViewController {
         let mSetupPoolVC = segue.source as? MSetupPoolVC
         if let selected = mSetupPoolVC?.selectedPool {
             setPool(poolModel: selected)
+            clearServer()
+        }
+    }
+    
+    @IBAction func unwindFromSetupServer(segue: UIStoryboardSegue) {
+        let mSetupServerVC = segue.source as? MSetupServerVC
+        if let selected = mSetupServerVC?.selectedServer {
+            setServer(serverModel: selected)
         }
     }
     

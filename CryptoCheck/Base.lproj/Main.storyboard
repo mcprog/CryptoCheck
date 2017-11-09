@@ -369,6 +369,7 @@
                         <outlet property="serverLabel" destination="lf3-HA-1br" id="WK9-vT-eV1"/>
                         <segue destination="YPx-u3-RVc" kind="showDetail" identifier="showSetupCurrency" id="5b0-u6-Ihh"/>
                         <segue destination="BF8-I7-k1b" kind="showDetail" identifier="showSetupPool" id="Pfo-9l-v13"/>
+                        <segue destination="3Iv-Xx-Zk1" kind="showDetail" identifier="showSetupServer" id="lNg-XR-tgf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WzO-pb-2ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -440,7 +441,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctl-g8-Gdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="X9E-ik-WNJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="-524.8875562218891"/>
+            <point key="canvasLocation" x="1374" y="-1229"/>
         </scene>
         <!--SetupCurrencyVC-->
         <scene sceneID="y0Y-MG-9vt">
@@ -517,7 +518,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gtf-FF-KvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="xvA-ou-Qp8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1430" y="-1212"/>
+            <point key="canvasLocation" x="601" y="-1229"/>
         </scene>
         <!--Tab BarVC-->
         <scene sceneID="gbV-mw-Eg0">
@@ -537,6 +538,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KV3-6i-Fbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-351" y="-123"/>
+        </scene>
+        <!--SetupServerVC-->
+        <scene sceneID="UnT-uy-RZF">
+            <objects>
+                <tableViewController id="3Iv-Xx-Zk1" userLabel="SetupServerVC" customClass="MSetupServerVC" customModule="CryptoCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rB0-D5-u61">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Server" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KT7-pb-3HW">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="375" id="MdA-Va-pPE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xSz-To-A4x">
+                            <rect key="frame" x="0.0" y="122" width="375" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.68235294120000001" green="0.4431372549" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                            <state key="normal" title="CANCEL">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <segue destination="CsQ-l4-R4P" kind="unwind" identifier="unwindFromSetupServerCancel" unwindAction="unwindFromSetupServerWithSegue:" id="281-hS-HC6"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="setupServerCell" id="YMI-Fh-16J" customClass="SetupServerCell" customModule="CryptoCheck" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="78" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YMI-Fh-16J" id="VTV-S2-nTN">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYY-ZR-Bev">
+                                            <rect key="frame" x="25" y="10" width="325" height="25"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wYY-ZR-Bev" firstAttribute="leading" secondItem="VTV-S2-nTN" secondAttribute="leading" constant="25" id="BKu-fn-FTq"/>
+                                        <constraint firstItem="wYY-ZR-Bev" firstAttribute="centerY" secondItem="VTV-S2-nTN" secondAttribute="centerY" id="LWq-bt-Wry"/>
+                                        <constraint firstAttribute="trailing" secondItem="wYY-ZR-Bev" secondAttribute="trailing" constant="25" id="kjM-A8-nTe"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="wYY-ZR-Bev" id="skT-jv-PQ5"/>
+                                    <segue destination="CsQ-l4-R4P" kind="unwind" identifier="unwindFromSetupServer" unwindAction="unwindFromSetupServerWithSegue:" id="hZQ-iq-oV0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3Iv-Xx-Zk1" id="NPq-CJ-qy3"/>
+                            <outlet property="delegate" destination="3Iv-Xx-Zk1" id="O7x-6D-MW9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e87-A6-Xzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CsQ-l4-R4P" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="-563"/>
         </scene>
     </scenes>
     <resources>
