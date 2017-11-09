@@ -22,6 +22,7 @@ class MSetupVC: UITableViewController {
     var pools: [PoolModel]?
     var selectedPool: PoolModel?
     var selectedServer: ServerModel?
+    var selectedPort: Int?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -57,6 +58,11 @@ class MSetupVC: UITableViewController {
                 return
             }
             performSegue(withIdentifier: "showSetupServer", sender: self)
+        case 3:
+            if selectedServer == nil {
+                return
+            }
+            performSegue(withIdentifier: "showSetupPort", sender: self)
         default:
             return
         }
@@ -112,12 +118,28 @@ class MSetupVC: UITableViewController {
         selectedServer = nil
     }
     
+    func setPort(port: Int) {
+        portLabel.text = "\(port)"
+    }
+    
+    func savePort(port: Int) {
+        defaults.set(port, forKey: "port")
+    }
+    
+    func clearPort() {
+        portLabel.text = "please select a port"
+        selectedPort = nil
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let mSetupPoolVC = segue.destination as? MSetupPoolVC {
             mSetupPoolVC.poolModels = pools
         }
         else if let mSetupServerVC = segue.destination as? MSetupServerVC {
             mSetupServerVC.serverModels = selectedPool?.servers
+        }
+        else if let mSetupPortVC = segue.destination as? MSetupPortVC {
+            mSetupPortVC.ports = selectedServer?.ports
         }
     }
     
@@ -127,6 +149,7 @@ class MSetupVC: UITableViewController {
             setCurrency(cryptoModel: selected)
             clearPool()
             clearServer()
+            clearPort()
         }
     }
     
@@ -135,6 +158,7 @@ class MSetupVC: UITableViewController {
         if let selected = mSetupPoolVC?.selectedPool {
             setPool(poolModel: selected)
             clearServer()
+            clearPort()
         }
     }
     
@@ -142,6 +166,14 @@ class MSetupVC: UITableViewController {
         let mSetupServerVC = segue.source as? MSetupServerVC
         if let selected = mSetupServerVC?.selectedServer {
             setServer(serverModel: selected)
+            clearPort()
+        }
+    }
+    
+    @IBAction func unwindFromSetupPort(segue: UIStoryboardSegue) {
+        let mSetupPortVC = segue.source as? MSetupPortVC
+        if let selected = mSetupPortVC?.selectedPort {
+            setPort(port: selected)
         }
     }
     
