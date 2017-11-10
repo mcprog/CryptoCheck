@@ -13,6 +13,7 @@ class MSetupServerVC: UITableViewController {
     
     var serverModels: [ServerModel]?
     var selectedServer: ServerModel?
+    var selectedIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,7 @@ class MSetupServerVC: UITableViewController {
             let index = tableView.indexPath(for: cell)
             if let indexPath = index?.row {
                 selectedServer = serverModels?[indexPath]
+                selectedIndex = indexPath
             }
         }
     }

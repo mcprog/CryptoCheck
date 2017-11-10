@@ -13,6 +13,7 @@ class MSetupPoolVC: UITableViewController {
     var poolModels: [PoolModel]?
     var poolNames = [String]()
     var selectedPool: PoolModel?
+    var selectedIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,7 @@ class MSetupPoolVC: UITableViewController {
             let index = tableView.indexPath(for: cell)
             if let indexPath = index?.row {
                 selectedPool = poolModels?[indexPath]
+                selectedIndex = indexPath
             }
         }
         

@@ -16,14 +16,19 @@ class MSetupVC: UITableViewController {
     @IBOutlet weak var serverLabel: UILabel!
     @IBOutlet weak var portLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var updateButton: UIButton!
     
     let defaults = UserDefaults.standard
     
+    var selectedCurrency: CryptoModel?
     var pools: [PoolModel]?
     var selectedPool: PoolModel?
     var selectedServer: ServerModel?
     var selectedPort: Int?
     var selectedAddress: String?
+    
+    var poolIndex = -1
+    var serverIndex = -1
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -34,10 +39,32 @@ class MSetupVC: UITableViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateButton.setTitle("UPDATE", for: .normal)
         if let suffix = defaults.string(forKey: "cryptoSuffix") {
             let model = CryptoModel.getCryptoModel(suffix: suffix)
             setCurrency(cryptoModel: model)
+            let pool = defaults.integer(forKey: "poolIndex")
+           
+            if (pool != 0) {
+                let poolModel = pools![pool - 1]
+                setPool(poolModel: poolModel)
+                let server = defaults.integer(forKey: "serverIndex")
+                if server != 0 {
+                    let serverModel = selectedPool!.servers[server - 1]
+                    setServer(serverModel: serverModel)
+                    let port = defaults.integer(forKey: "port")
+                    if (port != 0) {
+                        setPort(port: port)
+                    }
+                }
+            }
         }
+        if let address = defaults.string(forKey: "address") {
+            setAddress(address: address)
+        }
+        
+        
+        
         
     }
     
@@ -78,7 +105,7 @@ class MSetupVC: UITableViewController {
         currencyLabel.text = message
         
         pools = PoolModel.getPools(suffix: cryptoModel.suffix)
-        
+        selectedCurrency = cryptoModel
     }
     
     func saveCurrency(cryptoModel: CryptoModel) {
@@ -91,6 +118,8 @@ class MSetupVC: UITableViewController {
     func clearCurrency() {
         iconCurrency.image = nil
         currencyLabel.text = "please select a currency"
+        pools = nil
+        selectedCurrency = nil
     }
     
     func setPool(poolModel: PoolModel) {
@@ -98,13 +127,15 @@ class MSetupVC: UITableViewController {
         selectedPool = poolModel
     }
     
-    func savePool(poolModel: PoolModel) {
-        defaults.set(poolModel.name, forKey: "poolName")
+    func savePool(index: Int) {
+        //defaults.set(poolModel.name, forKey: "poolName")
+        defaults.set(index + 1, forKey: "poolIndex")
     }
     
     func clearPool() {
         poolLabel.text = "please select a mining pool"
         selectedPool = nil
+        poolIndex = -1
     }
     
     func setServer(serverModel: ServerModel) {
@@ -112,8 +143,9 @@ class MSetupVC: UITableViewController {
         selectedServer = serverModel
     }
     
-    func saveServer(serverModel: ServerModel) {
-        defaults.set(serverModel.name, forKey: "serverName")
+    func saveServer(index: Int) {
+        //defaults.set(serverModel.name, forKey: "serverName")
+        defaults.set(index + 1, forKey: "serverIndex")
     }
     
     func clearServer() {
@@ -123,6 +155,7 @@ class MSetupVC: UITableViewController {
     
     func setPort(port: Int) {
         portLabel.text = "\(port)"
+        selectedPort = port
     }
     
     func savePort(port: Int) {
@@ -136,6 +169,7 @@ class MSetupVC: UITableViewController {
     
     func setAddress(address: String) {
         addressLabel.text = address
+        selectedAddress = address
     }
     
     func saveAddress(address: String) {
@@ -145,6 +179,10 @@ class MSetupVC: UITableViewController {
     func clearAddress() {
         addressLabel.text = "please select an address"
         selectedAddress = nil
+    }
+    
+    func tryPoolAPICall() {
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -160,27 +198,39 @@ class MSetupVC: UITableViewController {
     }
     
     @IBAction func updateTouched(_ sender: Any) {
+        
         if (selectedPort == nil) {
+            updateButton.setTitle("MISSING FIELDS", for: .normal)
             return
         }
+        
         
         if (selectedAddress == nil) {
+            updateButton.setTitle("NO ADDRESS", for: .normal)
             return
         }
         
-        
-        
+        updateButton.setTitle("UPDATING...", for: .normal)
+        saveCurrency(cryptoModel: selectedCurrency!)
+        savePool(index: poolIndex)
+        saveServer(index: serverIndex)
+        savePort(port: selectedPort!)
+        saveAddress(address: selectedAddress!)
+        updateButton.setTitle("UPDATED", for: .normal)
     }
     
     @IBAction func unwindFromSetupCurrency(segue:UIStoryboardSegue) {
+        
         let mSetupCurrencyVC = segue.source as? MSetupCurrencyVC
         if let selected = mSetupCurrencyVC?.selectedCurrency {
             setCurrency(cryptoModel: selected)
+            
             clearPool()
             clearServer()
             clearPort()
             clearAddress()
         }
+        updateButton.setTitle("UPDATE", for: .normal)
     }
     
     @IBAction func unwindFromSetupPool(segue: UIStoryboardSegue) {
@@ -190,6 +240,10 @@ class MSetupVC: UITableViewController {
             clearServer()
             clearPort()
         }
+        if let index = mSetupPoolVC?.selectedIndex {
+            poolIndex = index
+        }
+        updateButton.setTitle("UPDATE", for: .normal)
     }
     
     @IBAction func unwindFromSetupServer(segue: UIStoryboardSegue) {
@@ -198,6 +252,10 @@ class MSetupVC: UITableViewController {
             setServer(serverModel: selected)
             clearPort()
         }
+        if let index = mSetupServerVC?.selectedIndex {
+            serverIndex = index
+        }
+        updateButton.setTitle("UPDATE", for: .normal)
     }
     
     @IBAction func unwindFromSetupPort(segue: UIStoryboardSegue) {
@@ -205,6 +263,7 @@ class MSetupVC: UITableViewController {
         if let selected = mSetupPortVC?.selectedPort {
             setPort(port: selected)
         }
+        updateButton.setTitle("UPDATE", for: .normal)
     }
     
     @IBAction func unwindFromSetupAddress(segue: UIStoryboardSegue) {
@@ -213,6 +272,7 @@ class MSetupVC: UITableViewController {
             setAddress(address: selected)
             
         }
+        updateButton.setTitle("UPDATE", for: .normal)
     }
     
     

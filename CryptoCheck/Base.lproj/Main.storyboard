@@ -370,6 +370,7 @@
                         <outlet property="poolLabel" destination="ccK-Yk-OON" id="uUd-L8-tG0"/>
                         <outlet property="portLabel" destination="Oxv-j6-Fud" id="eTq-bc-fWv"/>
                         <outlet property="serverLabel" destination="lf3-HA-1br" id="WK9-vT-eV1"/>
+                        <outlet property="updateButton" destination="Vcz-Js-rYu" id="0O2-3e-IkD"/>
                         <segue destination="YPx-u3-RVc" kind="showDetail" identifier="showSetupCurrency" id="5b0-u6-Ihh"/>
                         <segue destination="BF8-I7-k1b" kind="showDetail" identifier="showSetupPool" id="Pfo-9l-v13"/>
                         <segue destination="3Iv-Xx-Zk1" kind="showDetail" identifier="showSetupServer" id="lNg-XR-tgf"/>
