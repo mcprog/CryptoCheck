@@ -23,6 +23,7 @@ class MSetupVC: UITableViewController {
     var selectedPool: PoolModel?
     var selectedServer: ServerModel?
     var selectedPort: Int?
+    var selectedAddress: String?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -63,6 +64,8 @@ class MSetupVC: UITableViewController {
                 return
             }
             performSegue(withIdentifier: "showSetupPort", sender: self)
+        case 4:
+            performSegue(withIdentifier: "showSetupAddress", sender: self)
         default:
             return
         }
@@ -131,6 +134,19 @@ class MSetupVC: UITableViewController {
         selectedPort = nil
     }
     
+    func setAddress(address: String) {
+        addressLabel.text = address
+    }
+    
+    func saveAddress(address: String) {
+        defaults.set(address, forKey: "address")
+    }
+    
+    func clearAddress() {
+        addressLabel.text = "please select an address"
+        selectedAddress = nil
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let mSetupPoolVC = segue.destination as? MSetupPoolVC {
             mSetupPoolVC.poolModels = pools
@@ -143,6 +159,19 @@ class MSetupVC: UITableViewController {
         }
     }
     
+    @IBAction func updateTouched(_ sender: Any) {
+        if (selectedPort == nil) {
+            return
+        }
+        
+        if (selectedAddress == nil) {
+            return
+        }
+        
+        
+        
+    }
+    
     @IBAction func unwindFromSetupCurrency(segue:UIStoryboardSegue) {
         let mSetupCurrencyVC = segue.source as? MSetupCurrencyVC
         if let selected = mSetupCurrencyVC?.selectedCurrency {
@@ -150,6 +179,7 @@ class MSetupVC: UITableViewController {
             clearPool()
             clearServer()
             clearPort()
+            clearAddress()
         }
     }
     
@@ -174,6 +204,14 @@ class MSetupVC: UITableViewController {
         let mSetupPortVC = segue.source as? MSetupPortVC
         if let selected = mSetupPortVC?.selectedPort {
             setPort(port: selected)
+        }
+    }
+    
+    @IBAction func unwindFromSetupAddress(segue: UIStoryboardSegue) {
+        let mSetupAddressVC = segue.source as? MSetupAddressVC
+        if let selected = mSetupAddressVC?.selectedAddress{
+            setAddress(address: selected)
+            
         }
     }
     
