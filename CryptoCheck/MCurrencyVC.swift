@@ -10,4 +10,10 @@ import Foundation
 import UIKit
 class MCurrencyVC: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let mTabBarC = tabBarController as! MTabBarVC
+        print(mTabBarC.mine)
+    }
+    
 }

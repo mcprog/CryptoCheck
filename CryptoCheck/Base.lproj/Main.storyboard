@@ -10,6 +10,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
+            <string>Avenir-Black</string>
             <string>Avenir-Book</string>
         </array>
     </customFonts>
@@ -30,11 +31,42 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="36"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37g-sC-f6J">
+                                <rect key="frame" x="225" y="113" width="125" height="39"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="gq5-rY-jVY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cim-z3-ygY">
+                                <rect key="frame" x="25" y="113" width="125" height="39"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="70P-y6-GkF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="AD5-Lj-adF">
+                                <rect key="frame" x="133" y="78" width="108" height="108"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AD5-Lj-adF" firstAttribute="centerX" secondItem="feH-BV-lC1" secondAttribute="centerX" id="2cH-da-R8W"/>
                             <constraint firstItem="wjw-OW-s7X" firstAttribute="centerX" secondItem="feH-BV-lC1" secondAttribute="centerX" id="6rU-cW-mP1"/>
+                            <constraint firstItem="37g-sC-f6J" firstAttribute="centerY" secondItem="AD5-Lj-adF" secondAttribute="centerY" id="Bpo-X0-gaH"/>
+                            <constraint firstItem="cim-z3-ygY" firstAttribute="width" secondItem="37g-sC-f6J" secondAttribute="width" id="IJX-vI-QZj"/>
+                            <constraint firstItem="37g-sC-f6J" firstAttribute="leading" secondItem="cim-z3-ygY" secondAttribute="trailing" constant="75" id="WSW-lc-TzK"/>
+                            <constraint firstItem="cim-z3-ygY" firstAttribute="centerY" secondItem="AD5-Lj-adF" secondAttribute="centerY" id="Ycb-5i-zdd"/>
                             <constraint firstItem="wjw-OW-s7X" firstAttribute="top" secondItem="feH-BV-lC1" secondAttribute="top" id="Zng-Jf-e65"/>
+                            <constraint firstItem="AD5-Lj-adF" firstAttribute="top" secondItem="wjw-OW-s7X" secondAttribute="bottom" constant="8" id="dgh-WE-b6h"/>
+                            <constraint firstItem="cim-z3-ygY" firstAttribute="leading" secondItem="feH-BV-lC1" secondAttribute="leading" constant="25" id="oek-fw-uNZ"/>
+                            <constraint firstItem="feH-BV-lC1" firstAttribute="trailing" secondItem="37g-sC-f6J" secondAttribute="trailing" constant="25" id="q6X-hQ-VwM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="feH-BV-lC1"/>
                     </view>
@@ -42,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scx-nE-07t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="603" y="209"/>
+            <point key="canvasLocation" x="602.39999999999998" y="208.24587706146929"/>
         </scene>
         <!--Currency-->
         <scene sceneID="fUm-v3-Zbj">
@@ -868,6 +900,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Ellipse" width="108" height="108"/>
         <image name="ic_attach_money" width="24" height="24"/>
         <image name="ic_people" width="24" height="24"/>
         <image name="ic_settings" width="24" height="24"/>

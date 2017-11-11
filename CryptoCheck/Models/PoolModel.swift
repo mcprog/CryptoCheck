@@ -14,11 +14,13 @@ class PoolModel {
     var servers: [ServerModel]
     var selectedServerIndex: Int?
     var address: String?
+    var api: MineProtocol?
     
-    init(name: String, cryptoModel: CryptoModel, servers: [ServerModel]) {
+    init(name: String, cryptoModel: CryptoModel, servers: [ServerModel], api: MineProtocol) {
         self.name = name
         self.cryptoModel = cryptoModel
         self.servers = servers
+        self.api = api
     }
     
     static let btcPools = [PoolModel]()
@@ -28,14 +30,14 @@ class PoolModel {
             ServerModel(name: "us2.ethermine.org", ports: [4444, 1444]),
             ServerModel(name: "eu1.ethermine.org", ports: [4444, 1444]),
             ServerModel(name: "asia1.ethermine.org", ports: [4444, 1444])
-        ]),
+            ], api: EthermineAPI()),
         PoolModel(name: "nanopool.org", cryptoModel: CryptoModel.eth, servers: [
             ServerModel(name: "eth-eu1.nanopool.org", ports: [9999]),
             ServerModel(name: "eth-eu2.nanopool.org", ports: [9999]),
             ServerModel(name: "eth-us-east1.nanopool.org", ports: [9999]),
             ServerModel(name: "eth-us-west1.nanopool.org", ports: [9999]),
             ServerModel(name: "eth-asia1.nanopool.org", ports: [9999])
-        ])
+            ], api: EthermineAPI())
     ]
     static let ltcPools = [PoolModel]()
     static let xmrPools = [PoolModel]()

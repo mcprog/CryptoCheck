@@ -39,6 +39,7 @@ class MSetupVC: UITableViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         updateButton.setTitle("UPDATE", for: .normal)
         if let suffix = defaults.string(forKey: "cryptoSuffix") {
             let model = CryptoModel.getCryptoModel(suffix: suffix)
@@ -62,7 +63,6 @@ class MSetupVC: UITableViewController {
         if let address = defaults.string(forKey: "address") {
             setAddress(address: address)
         }
-        
         
         
         
@@ -182,7 +182,11 @@ class MSetupVC: UITableViewController {
     }
     
     func tryPoolAPICall() {
-        
+        let api = selectedPool?.api
+        api?.apiCall(address: selectedAddress!, tabBarVC: tabBarController!)
+        //var mine = api?.generateMineModel(address: selectedAddress!, workers: workers!)
+        //print("returned from gen mine")
+        //print(mine)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -217,6 +221,7 @@ class MSetupVC: UITableViewController {
         savePort(port: selectedPort!)
         saveAddress(address: selectedAddress!)
         updateButton.setTitle("UPDATED", for: .normal)
+        tryPoolAPICall()
     }
     
     @IBAction func unwindFromSetupCurrency(segue:UIStoryboardSegue) {
