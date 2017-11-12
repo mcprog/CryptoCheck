@@ -13,6 +13,8 @@ class MineModel {
     var reported: Double?
     var current: Double?
     var average: Double?
+    var api: MineProtocol?
+    var address: String?
     
     init(reported: Double, current: Double, average: Double, workers: [WorkerModel]) {
         self.reported = reported
@@ -24,7 +26,7 @@ class MineModel {
 
 extension MineModel : CustomStringConvertible {
     var description: String {
-        return  "MineModel:\n\t-workers: \(workers!.count)\n\t-reported: \(reported!)\n\t-current: \(current!)\n\t-average: \(average!)"
+        return  "MineModel:\n\t-workers: \(workers!.count)\n\t-reported: \(reported!)\n\t-current: \(current!)\n\t-average: \(average!)\n\t-address: \(address!)"
     }
     
     

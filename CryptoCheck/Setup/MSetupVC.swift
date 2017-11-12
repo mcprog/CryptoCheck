@@ -182,6 +182,7 @@ class MSetupVC: UITableViewController {
     }
     
     func tryPoolAPICall() {
+        print("trying new api call")
         let api = selectedPool?.api
         api?.apiCall(address: selectedAddress!, tabBarVC: tabBarController!)
         //var mine = api?.generateMineModel(address: selectedAddress!, workers: workers!)
@@ -215,6 +216,8 @@ class MSetupVC: UITableViewController {
         }
         
         updateButton.setTitle("UPDATING...", for: .normal)
+        tabBarController?.tabBar.items![1].isEnabled = false
+        tabBarController?.tabBar.items![2].isEnabled = false
         saveCurrency(cryptoModel: selectedCurrency!)
         savePool(index: poolIndex)
         saveServer(index: serverIndex)

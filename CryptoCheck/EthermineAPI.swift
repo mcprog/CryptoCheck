@@ -30,6 +30,8 @@ struct EthermineAPI : MineProtocol {
                             let current = dict!["currentHashrate"] as! Double
                             let average = dict!["averageHashrate"] as! Double
                             mine = MineModel(reported: reported, current: current, average: average, workers: workers)
+                            mine?.address = address
+                            mine?.api = self
                             let mTabBarC = tabBarVC as! MTabBarVC
                             
                             DispatchQueue.main.async {
@@ -72,11 +74,15 @@ struct EthermineAPI : MineProtocol {
                                 let invalid = el["invalidShares"] as! Int
                                 let valid = el["validShares"] as! Int
                                 let name = el["worker"] as! String
-                                let lastSeen = el["lastSeen"]
+                                let lastSeen = el["lastSeen"] as! Int
+                                let lastSeenDate = Date(timeIntervalSince1970: TimeInterval(lastSeen))
+                                print("\(lastSeenDate) vs \(Date())")
                                 
                                 let worker = WorkerModel(name: name, reported: reported, current: current, average: average, validShares: valid, invalidShares: invalid, staleShares: stale)
+                                worker.lastSeen = lastSeenDate
+                                
                                 workers.append(worker)
-                                //print(worker)
+                                print(worker)
                                 
                             }
                             self.apiSubCall(address: address, tabBarVC: tabBarVC, workers: workers)

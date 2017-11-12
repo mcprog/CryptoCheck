@@ -31,7 +31,7 @@ class WorkerModel {
 
 extension WorkerModel: CustomStringConvertible {
     var description: String {
-        return "WorkerModel: " + name! + " (\(type(of: name!)))\n\t-reported: \(reported!)\n\t-current: \(current!)\n\t-average: \(average!)\n\t-valid: \(validShares!)\n\t-invalid: \(invalidShares!)\n\t-stale: \(staleShares!)"
+        return "WorkerModel: " + name! + " (\(type(of: name!)))\n\t-reported: \(reported!)\n\t-current: \(current!)\n\t-average: \(average!)\n\t-valid: \(validShares!)\n\t-invalid: \(invalidShares!)\n\t-stale: \(staleShares!)\n\t-lastSeen: \(lastSeen ?? Date(timeIntervalSince1970: TimeInterval(0)))"
     }
 }
 

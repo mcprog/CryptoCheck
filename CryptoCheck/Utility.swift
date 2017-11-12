@@ -15,4 +15,24 @@ class Utility {
         }
     }
     
+    static func toMH(hash: Double) -> Double {
+        return hash / 1000000
+    }
+    
+    static func getAgo(date : Date) -> String {
+        let now = Date()
+        let seconds = now.timeIntervalSince(date)
+        if (seconds < 60) {
+            return "\(Int(seconds)) secs ago"
+        }
+        else if (seconds < 3600) {
+            return "\(Int(seconds / 60)) mins ago"
+        }
+        else if (seconds < 86400) {
+            return "\(Int(seconds / 3600)) hrs ago"
+        } else {
+            return "\(Int(seconds / 86400)) days ago"
+        }
+    }
+    
 }
