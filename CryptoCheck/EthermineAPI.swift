@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 struct EthermineAPI : MineProtocol {
     
-    func apiSubCall(address: String, tabBarVC: UITabBarController, workers: [WorkerModel]) {
+    func apiSubCall(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton, workers: [WorkerModel]) {
         let baseUrl = "https://api.ethermine.org/miner/"
-        let mineUrlString = URL(string: baseUrl + address + "/currentStats")
+        let mineUrlString = URL(string: baseUrl + setup.address + "/currentStats")
         if let mineUrl = mineUrlString {
             let mineTask = URLSession.shared.dataTask(with: mineUrl) {
                 (data, response, error) in
@@ -30,14 +30,14 @@ struct EthermineAPI : MineProtocol {
                             let current = dict!["currentHashrate"] as! Double
                             let average = dict!["averageHashrate"] as! Double
                             mine = MineModel(reported: reported, current: current, average: average, workers: workers)
-                            mine?.address = address
-                            mine?.api = self
                             let mTabBarC = tabBarVC as! MTabBarVC
                             
                             DispatchQueue.main.async {
                                 mTabBarC.mine = mine
+                                mTabBarC.setup = setup
                                 mTabBarC.unlockTabs()
                                 mTabBarC.setTab(index: 1)
+                                button.setTitle("DONE", for: .normal)
                             }
                             
                         } catch {
@@ -51,9 +51,9 @@ struct EthermineAPI : MineProtocol {
     }
     
     
-   func apiCall(address: String, tabBarVC: UITabBarController) {
+    func apiCall(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton) {
         let baseUrl = "https://api.ethermine.org/miner/"
-        let workerUrlString = URL(string: baseUrl + address + "/workers")
+        let workerUrlString = URL(string: baseUrl + setup.address + "/workers")
         if let workerUrl = workerUrlString {
             let workerTask = URLSession.shared.dataTask(with: workerUrl) {
                 (data, response, error) in
@@ -85,7 +85,7 @@ struct EthermineAPI : MineProtocol {
                                 print(worker)
                                 
                             }
-                            self.apiSubCall(address: address, tabBarVC: tabBarVC, workers: workers)
+                            self.apiSubCall(setup: setup, tabBarVC: tabBarVC, button: button, workers: workers)
                         } catch {
                             print("Couldn't parse JSON")
                         }

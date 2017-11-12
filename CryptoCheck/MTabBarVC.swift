@@ -11,6 +11,7 @@ import UIKit
 class MTabBarVC: UITabBarController {
     
     var mine: MineModel?
+    var setup: SetupModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()

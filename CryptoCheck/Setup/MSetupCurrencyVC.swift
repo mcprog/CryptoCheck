@@ -17,6 +17,7 @@ class MSetupCurrencyVC: UITableViewController {
     
     
     var selectedCurrency: CryptoModel?
+    var selectedIndex: Int?
     
     required init?(coder aCoder: NSCoder) {
         super.init(coder: aCoder)
@@ -49,6 +50,7 @@ class MSetupCurrencyVC: UITableViewController {
             let index = tableView.indexPath(for: cell)
             if let indexPath = index?.row {
                 selectedCurrency = coins[indexPath]
+                selectedIndex = indexPath
             }
         }
     }

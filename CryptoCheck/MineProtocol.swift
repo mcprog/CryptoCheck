@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 protocol MineProtocol {
     
-    func apiCall(address: String, tabBarVC: UITabBarController)
+    func apiCall(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton)
     
-    func apiSubCall(address: String, tabBarVC: UITabBarController, workers: [WorkerModel])
+    func apiSubCall(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton, workers: [WorkerModel])
     
 }

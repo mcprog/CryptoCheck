@@ -26,6 +26,7 @@ class MSetupVC: UITableViewController {
     var selectedAddress: String?
     var currentSetup: SetupModel?
     
+    var currencyIndex = -1
     var poolIndex = -1
     
     required init?(coder aDecoder: NSCoder) {
@@ -61,10 +62,9 @@ class MSetupVC: UITableViewController {
         if let address = defaults.string(forKey: "address") {
             setAddress(address: address)
         }*/
-    
+        
         if let setup = SetupModel.getObject() {
             print(setup)
-            
             setCurrency(cryptoModel: CryptoModel.getCoins()[setup.currencyIndex])
             setPool(poolModel: pools![setup.poolIndex])
             setAddress(address: setup.address)
@@ -106,6 +106,9 @@ class MSetupVC: UITableViewController {
     
     func setSetup(setup: SetupModel) {
         currentSetup = setup
+        currencyIndex = setup.currencyIndex
+        poolIndex = setup.poolIndex
+        print("cI: \(currencyIndex), pI \(poolIndex)")
     }
     
     func saveSetup(setup: SetupModel) {
@@ -158,7 +161,8 @@ class MSetupVC: UITableViewController {
     func tryPoolAPICall() {
         print("trying new api call")
         let api = selectedPool?.api
-        api?.apiCall(address: selectedAddress!, tabBarVC: tabBarController!)
+        api?.apiCall(setup: currentSetup!
+            , tabBarVC: tabBarController!, button: updateButton)
         //var mine = api?.generateMineModel(address: selectedAddress!, workers: workers!)
         //print("returned from gen mine")
         //print(mine)
@@ -186,6 +190,10 @@ class MSetupVC: UITableViewController {
         updateButton.setTitle("UPDATING...", for: .normal)
         tabBarController?.tabBar.items![1].isEnabled = false
         tabBarController?.tabBar.items![2].isEnabled = false
+        let setup = SetupModel(currencyIndex: currencyIndex, poolIndex: poolIndex, address: selectedAddress!)
+        print("final setup:")
+        print(setup)
+        setSetup(setup: setup)
         SetupModel.saveObject(object: currentSetup!)
         tryPoolAPICall()
     }
@@ -198,6 +206,9 @@ class MSetupVC: UITableViewController {
             
             clearPool()
             clearAddress()
+        }
+        if let selectedIndex = mSetupCurrencyVC?.selectedIndex {
+            currencyIndex = selectedIndex
         }
         updateButton.setTitle("UPDATE", for: .normal)
     }
