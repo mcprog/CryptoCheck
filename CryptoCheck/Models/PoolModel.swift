@@ -11,33 +11,19 @@ class PoolModel {
     
     var name: String
     var cryptoModel: CryptoModel
-    var servers: [ServerModel]
-    var selectedServerIndex: Int?
     var address: String?
     var api: MineProtocol?
     
-    init(name: String, cryptoModel: CryptoModel, servers: [ServerModel], api: MineProtocol) {
+    init(name: String, cryptoModel: CryptoModel, api: MineProtocol) {
         self.name = name
         self.cryptoModel = cryptoModel
-        self.servers = servers
         self.api = api
     }
     
     static let btcPools = [PoolModel]()
     static let ethPools = [
-        PoolModel(name: "ethermine.org", cryptoModel: CryptoModel.eth, servers: [
-            ServerModel(name: "us1.ethermine.org", ports: [4444, 1444]),
-            ServerModel(name: "us2.ethermine.org", ports: [4444, 1444]),
-            ServerModel(name: "eu1.ethermine.org", ports: [4444, 1444]),
-            ServerModel(name: "asia1.ethermine.org", ports: [4444, 1444])
-            ], api: EthermineAPI()),
-        PoolModel(name: "nanopool.org", cryptoModel: CryptoModel.eth, servers: [
-            ServerModel(name: "eth-eu1.nanopool.org", ports: [9999]),
-            ServerModel(name: "eth-eu2.nanopool.org", ports: [9999]),
-            ServerModel(name: "eth-us-east1.nanopool.org", ports: [9999]),
-            ServerModel(name: "eth-us-west1.nanopool.org", ports: [9999]),
-            ServerModel(name: "eth-asia1.nanopool.org", ports: [9999])
-            ], api: EthermineAPI())
+        PoolModel(name: "ethermine.org", cryptoModel: CryptoModel.eth, api: EthermineAPI()),
+        PoolModel(name: "nanopool.org", cryptoModel: CryptoModel.eth, api: EthermineAPI())
     ]
     static let ltcPools = [PoolModel]()
     static let xmrPools = [PoolModel]()
