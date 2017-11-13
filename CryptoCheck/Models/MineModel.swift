@@ -15,6 +15,8 @@ class MineModel {
     var average: Double?
     var api: MineProtocol?
     var address: String?
+    var unpaid: Double?
+    var perMin: Double?
     
     init(reported: Double, current: Double, average: Double, workers: [WorkerModel]) {
         self.reported = reported

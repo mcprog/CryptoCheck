@@ -20,6 +20,7 @@ class MCurrencyVC: UIViewController {
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var inMineLabel: UILabel!
     
+    let baseDiv = 1000000000000000000.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,22 +28,33 @@ class MCurrencyVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
         currencyLabel.text = CryptoModel.getCoins()[getSetup().currencyIndex].getFullName()
         print(getMinPayout())
         
         qrView.image = generateQRCode(from: getSetup().address)
         
-        var total: UInt64 = 0
+        var total: Double = 0
         for p in getPayouts() {
-            total += p.amount
+            total += Double(p.amount) / baseDiv
         }
-        print("raw tot=\(total)")
-        print("tot=\(keepPrecision(uint: total))")
         
-        paidLabel.text = String(keepPrecision(uint: total).prefix(6))
+        paidLabel.text = String(format: "%.4f", total)
         
         nDateLabel.text = getPayouts().first?.date.description
+        let unpaid = getMine().unpaid! / baseDiv
+        inMineLabel.text = String(format: "%.4f", unpaid)
+        
+        let percent = unpaid * 100
+        percentLabel.text = String(format: "%.1f", percent) + "% to 1.0 " + CryptoModel.getCoins()[getSetup().currencyIndex].suffix
+        purpleView.frame.size = CGSize(width: blackView.bounds.width * CGFloat(unpaid), height: purpleView.bounds.height)
+        purpleView.frame.origin = CGPoint(x: blackView.frame.origin.x, y: blackView.frame.origin.y)
+        //purpleView.layoutIfNeeded()
+        
+        
+        let time = TimeInterval((1 / (getMine().perMin! / 60)) * (1-unpaid))
+        pDateLabel.text = "\(Date(timeIntervalSinceNow: time))"
     }
     
     func keepPrecision(uint: UInt64) -> String {

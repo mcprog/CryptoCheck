@@ -133,7 +133,11 @@ struct EthermineAPI : MineProtocol {
                             let reported = dict!["reportedHashrate"] as! Double
                             let current = dict!["currentHashrate"] as! Double
                             let average = dict!["averageHashrate"] as! Double
+                            let unpaid = dict!["unpaid"] as! Double
+                            let perMin = dict!["coinsPerMin"] as! Double
                             mine = MineModel(reported: reported, current: current, average: average, workers: workers)
+                            mine?.unpaid = unpaid
+                            mine?.perMin = perMin
                             let mTabBarC = tabBarVC as! MTabBarVC
                             mTabBarC.mine = mine
                             mTabBarC.setup = setup
