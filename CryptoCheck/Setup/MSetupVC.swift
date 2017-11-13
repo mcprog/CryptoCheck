@@ -32,36 +32,13 @@ class MSetupVC: UITableViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        //Utility.printUserDefaults()
         
     }
  
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //updateButton.setTitle("UPDATE", for: .normal)
-        /*if let suffix = defaults.string(forKey: "cryptoSuffix") {
-            let model = CryptoModel.getCryptoModel(suffix: suffix)
-            setCurrency(cryptoModel: model)
-            let pool = defaults.integer(forKey: "poolIndex")
-           
-            if (pool != 0) {
-                let poolModel = pools![pool - 1]
-                setPool(poolModel: poolModel)
-                let server = defaults.integer(forKey: "serverIndex")
-                if server != 0 {
-                    let serverModel = selectedPool!.servers[server - 1]
-                    setServer(serverModel: serverModel)
-                    let port = defaults.integer(forKey: "port")
-                    if (port != 0) {
-                        setPort(port: port)
-                    }
-                }
-            }
-        }
-        if let address = defaults.string(forKey: "address") {
-            setAddress(address: address)
-        }*/
+
         
         if let setup = SetupModel.getObject() {
             print(setup)
@@ -161,8 +138,7 @@ class MSetupVC: UITableViewController {
     func tryPoolAPICall() {
         print("trying new api call")
         let api = selectedPool?.api
-        api?.apiCall(setup: currentSetup!
-            , tabBarVC: tabBarController!, button: updateButton)
+        api?.workers(setup: currentSetup!, tabBarVC: tabBarController!, button: updateButton)
         //var mine = api?.generateMineModel(address: selectedAddress!, workers: workers!)
         //print("returned from gen mine")
         //print(mine)

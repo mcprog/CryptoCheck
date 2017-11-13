@@ -12,6 +12,9 @@ class MTabBarVC: UITabBarController {
     
     var mine: MineModel?
     var setup: SetupModel?
+    var minPayout: Double?
+    var histories: [HistoryModel]?
+    var payouts: [PayoutModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()

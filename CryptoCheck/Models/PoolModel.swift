@@ -29,7 +29,9 @@ class PoolModel {
     static let xmrPools = [PoolModel]()
     static let dashPools = [PoolModel]()
     static let pascPools = [PoolModel]()
-    static let dcrPools = [PoolModel]()
+    static let dcrPools = [
+        PoolModel(name: "ethermine.org", cryptoModel: CryptoModel.eth, api: EthermineAPI())
+    ]
     
     
     static func getPools(suffix: String) -> [PoolModel] {

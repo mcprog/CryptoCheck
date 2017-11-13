@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032BB2901FB91E2800874EC6 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032BB28F1FB91E2800874EC6 /* HistoryModel.swift */; };
+		0342EEE31FB8845B0095D4C5 /* MWorkersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342EEE21FB8845B0095D4C5 /* MWorkersTVC.swift */; };
+		0342EEE51FB886640095D4C5 /* WorkerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342EEE41FB886640095D4C5 /* WorkerCell.swift */; };
+		034684C81FB467E100F785D8 /* MSetupAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034684C71FB467E100F785D8 /* MSetupAddressVC.swift */; };
+		034684CA1FB50A8300F785D8 /* MSetupAddressNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034684C91FB50A8300F785D8 /* MSetupAddressNewVC.swift */; };
+		0348D3741FB4652C00B9A42B /* SetupAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0348D3731FB4652C00B9A42B /* SetupAddressCell.swift */; };
 		0349B4BB1FB18FAF0076F8E7 /* SetupCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349B4BA1FB18FAF0076F8E7 /* SetupCurrencyCell.swift */; };
 		03610A7B1FAA34490009D312 /* MPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A7A1FAA34490009D312 /* MPageVC.swift */; };
 		03610A7D1FAA3DEE0009D312 /* MSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A7C1FAA3DEE0009D312 /* MSetupVC.swift */; };
@@ -16,6 +22,8 @@
 		03610A871FB14CD30009D312 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A861FB14CD30009D312 /* CryptoModel.swift */; };
 		03610A8B1FB150910009D312 /* MSetupCurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A8A1FB150910009D312 /* MSetupCurrencyVC.swift */; };
 		03610A8D1FB159EB0009D312 /* CryptoCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A8C1FB159EB0009D312 /* CryptoCompare.swift */; };
+		0363268F1FB8EE8800785753 /* SetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363268E1FB8EE8800785753 /* SetupModel.swift */; };
+		038B86511FB836F0006324F0 /* MDashboardWorkersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038B86501FB836F0006324F0 /* MDashboardWorkersVC.swift */; };
 		038DA9981FB2682300811AD2 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038DA9971FB2682300811AD2 /* Utility.swift */; };
 		038DA99E1FB2A8EC00811AD2 /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038DA99D1FB2A8EC00811AD2 /* PoolModel.swift */; };
 		038DA9A01FB2A9D600811AD2 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038DA99F1FB2A9D600811AD2 /* ServerModel.swift */; };
@@ -30,6 +38,18 @@
 		039DF90B1F9C245A0003FA18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039DF9091F9C245A0003FA18 /* LaunchScreen.storyboard */; };
 		039DF9161F9C245A0003FA18 /* CryptoCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039DF9151F9C245A0003FA18 /* CryptoCheckTests.swift */; };
 		039DF9211F9C245A0003FA18 /* CryptoCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039DF9201F9C245A0003FA18 /* CryptoCheckUITests.swift */; };
+		039F45661FB44B8C00D59C1E /* SetupPortCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039F45651FB44B8C00D59C1E /* SetupPortCell.swift */; };
+		03A6E5D21FB545C90008C4CB /* MDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6E5D11FB545C90008C4CB /* MDefaults.swift */; };
+		03A6E5D41FB574400008C4CB /* WorkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6E5D31FB574400008C4CB /* WorkerModel.swift */; };
+		03A6E5D61FB575810008C4CB /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6E5D51FB575810008C4CB /* MineModel.swift */; };
+		03A6E5D81FB578660008C4CB /* MineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6E5D71FB578660008C4CB /* MineProtocol.swift */; };
+		03A6E5DA1FB592B40008C4CB /* EthermineAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6E5D91FB592B40008C4CB /* EthermineAPI.swift */; };
+		03BE3BAD1FB2E9F500420EBB /* SetupServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE3BAC1FB2E9F500420EBB /* SetupServerCell.swift */; };
+		03F368F61FB9357600A50952 /* SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F368F71FB9357600A50952 /* SwiftCharts.framework */; };
+		03F368F91FB96B2E00A50952 /* PayoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F368F81FB96B2D00A50952 /* PayoutModel.swift */; };
+		03FB03411FB3AD70008CC693 /* MSetupServerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB03401FB3AD70008CC693 /* MSetupServerVC.swift */; };
+		03FB03431FB3ED49008CC693 /* MSetupPortVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB03421FB3ED49008CC693 /* MSetupPortVC.swift */; };
+		F4F6CCEE2B2805734FC5C5CF /* Pods_CryptoCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018E3ACB2392B637774E8794 /* Pods_CryptoCheck.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +70,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		018E3ACB2392B637774E8794 /* Pods_CryptoCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		032BB28F1FB91E2800874EC6 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		0342EEE21FB8845B0095D4C5 /* MWorkersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWorkersTVC.swift; sourceTree = "<group>"; };
+		0342EEE41FB886640095D4C5 /* WorkerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerCell.swift; sourceTree = "<group>"; };
+		034684C71FB467E100F785D8 /* MSetupAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSetupAddressVC.swift; sourceTree = "<group>"; };
+		034684C91FB50A8300F785D8 /* MSetupAddressNewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSetupAddressNewVC.swift; sourceTree = "<group>"; };
+		0348D3731FB4652C00B9A42B /* SetupAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAddressCell.swift; sourceTree = "<group>"; };
 		0349B4BA1FB18FAF0076F8E7 /* SetupCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCurrencyCell.swift; sourceTree = "<group>"; };
 		03610A7A1FAA34490009D312 /* MPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPageVC.swift; sourceTree = "<group>"; };
 		03610A7C1FAA3DEE0009D312 /* MSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSetupVC.swift; sourceTree = "<group>"; };
@@ -59,6 +86,8 @@
 		03610A861FB14CD30009D312 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
 		03610A8A1FB150910009D312 /* MSetupCurrencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSetupCurrencyVC.swift; sourceTree = "<group>"; };
 		03610A8C1FB159EB0009D312 /* CryptoCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompare.swift; sourceTree = "<group>"; };
+		0363268E1FB8EE8800785753 /* SetupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupModel.swift; sourceTree = "<group>"; };
+		038B86501FB836F0006324F0 /* MDashboardWorkersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDashboardWorkersVC.swift; sourceTree = "<group>"; };
 		038DA9971FB2682300811AD2 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		038DA99D1FB2A8EC00811AD2 /* PoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolModel.swift; sourceTree = "<group>"; };
 		038DA99F1FB2A9D600811AD2 /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
@@ -79,6 +108,19 @@
 		039DF91C1F9C245A0003FA18 /* CryptoCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		039DF9201F9C245A0003FA18 /* CryptoCheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCheckUITests.swift; sourceTree = "<group>"; };
 		039DF9221F9C245A0003FA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		039F45651FB44B8C00D59C1E /* SetupPortCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPortCell.swift; sourceTree = "<group>"; };
+		03A6E5D11FB545C90008C4CB /* MDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDefaults.swift; sourceTree = "<group>"; };
+		03A6E5D31FB574400008C4CB /* WorkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerModel.swift; sourceTree = "<group>"; };
+		03A6E5D51FB575810008C4CB /* MineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
+		03A6E5D71FB578660008C4CB /* MineProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineProtocol.swift; sourceTree = "<group>"; };
+		03A6E5D91FB592B40008C4CB /* EthermineAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthermineAPI.swift; sourceTree = "<group>"; };
+		03BE3BAC1FB2E9F500420EBB /* SetupServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupServerCell.swift; sourceTree = "<group>"; };
+		03F368F71FB9357600A50952 /* SwiftCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F368F81FB96B2D00A50952 /* PayoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayoutModel.swift; sourceTree = "<group>"; };
+		03FB03401FB3AD70008CC693 /* MSetupServerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSetupServerVC.swift; sourceTree = "<group>"; };
+		03FB03421FB3ED49008CC693 /* MSetupPortVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSetupPortVC.swift; sourceTree = "<group>"; };
+		241AC3C609128EE9C9B779BE /* Pods-CryptoCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCheck.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCheck/Pods-CryptoCheck.release.xcconfig"; sourceTree = "<group>"; };
+		C3F8840CA262D64B24EDF96A /* Pods-CryptoCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCheck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCheck/Pods-CryptoCheck.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F368F61FB9357600A50952 /* SwiftCharts.framework in Frameworks */,
+				F4F6CCEE2B2805734FC5C5CF /* Pods_CryptoCheck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +150,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0317EB931FB83EE900380BD8 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				03610A7E1FAA3F0A0009D312 /* MDashboardVC.swift */,
+				038B86501FB836F0006324F0 /* MDashboardWorkersVC.swift */,
+				0342EEE21FB8845B0095D4C5 /* MWorkersTVC.swift */,
+				0342EEE41FB886640095D4C5 /* WorkerCell.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		034684C61FB4678C00F785D8 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				03610A7C1FAA3DEE0009D312 /* MSetupVC.swift */,
+				03610A8A1FB150910009D312 /* MSetupCurrencyVC.swift */,
+				038DA9A11FB2BF0D00811AD2 /* MSetupPoolVC.swift */,
+				03FB03401FB3AD70008CC693 /* MSetupServerVC.swift */,
+				03FB03421FB3ED49008CC693 /* MSetupPortVC.swift */,
+				034684C71FB467E100F785D8 /* MSetupAddressVC.swift */,
+				034684C91FB50A8300F785D8 /* MSetupAddressNewVC.swift */,
+				0349B4BA1FB18FAF0076F8E7 /* SetupCurrencyCell.swift */,
+				038DA9A31FB2C21700811AD2 /* SetupPoolCell.swift */,
+				03BE3BAC1FB2E9F500420EBB /* SetupServerCell.swift */,
+				039F45651FB44B8C00D59C1E /* SetupPortCell.swift */,
+				0348D3731FB4652C00B9A42B /* SetupAddressCell.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
 		03610A891FB14D650009D312 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				03610A861FB14CD30009D312 /* CryptoModel.swift */,
 				038DA99D1FB2A8EC00811AD2 /* PoolModel.swift */,
 				038DA99F1FB2A9D600811AD2 /* ServerModel.swift */,
+				03A6E5D31FB574400008C4CB /* WorkerModel.swift */,
+				03A6E5D51FB575810008C4CB /* MineModel.swift */,
+				0363268E1FB8EE8800785753 /* SetupModel.swift */,
+				032BB28F1FB91E2800874EC6 /* HistoryModel.swift */,
+				03F368F81FB96B2D00A50952 /* PayoutModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +202,8 @@
 				039DF9141F9C245A0003FA18 /* CryptoCheckTests */,
 				039DF91F1F9C245A0003FA18 /* CryptoCheckUITests */,
 				039DF8FA1F9C245A0003FA18 /* Products */,
+				FB82ACF0DC3B809A8F0B720F /* Pods */,
+				A1EFDD539E231358F43482D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,26 +220,25 @@
 		039DF8FB1F9C245A0003FA18 /* CryptoCheck */ = {
 			isa = PBXGroup;
 			children = (
+				034684C61FB4678C00F785D8 /* Setup */,
 				03610A891FB14D650009D312 /* Models */,
 				039DF8FC1F9C245A0003FA18 /* AppDelegate.swift */,
+				039DF9041F9C245A0003FA18 /* Main.storyboard */,
+				0317EB931FB83EE900380BD8 /* Dashboard */,
 				039DF8FE1F9C245A0003FA18 /* RootViewController.swift */,
 				039DF9001F9C245A0003FA18 /* DataViewController.swift */,
 				039DF9021F9C245A0003FA18 /* ModelController.swift */,
-				039DF9041F9C245A0003FA18 /* Main.storyboard */,
 				03610A801FAA3F8D0009D312 /* MCurrencyVC.swift */,
-				03610A7E1FAA3F0A0009D312 /* MDashboardVC.swift */,
 				039DF9071F9C245A0003FA18 /* Assets.xcassets */,
 				039DF9091F9C245A0003FA18 /* LaunchScreen.storyboard */,
 				039DF90C1F9C245A0003FA18 /* Info.plist */,
-				03610A7A1FAA34490009D312 /* MPageVC.swift */,
-				03610A7C1FAA3DEE0009D312 /* MSetupVC.swift */,
 				038DA9971FB2682300811AD2 /* Utility.swift */,
-				03610A821FAA454C0009D312 /* MTabBarVC.swift */,
-				03610A8A1FB150910009D312 /* MSetupCurrencyVC.swift */,
 				03610A8C1FB159EB0009D312 /* CryptoCompare.swift */,
-				0349B4BA1FB18FAF0076F8E7 /* SetupCurrencyCell.swift */,
-				038DA9A11FB2BF0D00811AD2 /* MSetupPoolVC.swift */,
-				038DA9A31FB2C21700811AD2 /* SetupPoolCell.swift */,
+				03610A7A1FAA34490009D312 /* MPageVC.swift */,
+				03610A821FAA454C0009D312 /* MTabBarVC.swift */,
+				03A6E5D11FB545C90008C4CB /* MDefaults.swift */,
+				03A6E5D71FB578660008C4CB /* MineProtocol.swift */,
+				03A6E5D91FB592B40008C4CB /* EthermineAPI.swift */,
 			);
 			path = CryptoCheck;
 			sourceTree = "<group>";
@@ -181,6 +261,24 @@
 			path = CryptoCheckUITests;
 			sourceTree = "<group>";
 		};
+		A1EFDD539E231358F43482D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03F368F71FB9357600A50952 /* SwiftCharts.framework */,
+				018E3ACB2392B637774E8794 /* Pods_CryptoCheck.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB82ACF0DC3B809A8F0B720F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8840CA262D64B24EDF96A /* Pods-CryptoCheck.debug.xcconfig */,
+				241AC3C609128EE9C9B779BE /* Pods-CryptoCheck.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +286,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 039DF9251F9C245B0003FA18 /* Build configuration list for PBXNativeTarget "CryptoCheck" */;
 			buildPhases = (
+				92B5B545903B73F531514366 /* [CP] Check Pods Manifest.lock */,
 				039DF8F51F9C245A0003FA18 /* Sources */,
 				039DF8F61F9C245A0003FA18 /* Frameworks */,
 				039DF8F71F9C245A0003FA18 /* Resources */,
+				ACCC4DB7D7CF8AA6CCD4C578 /* [CP] Embed Pods Frameworks */,
+				6721AD23D98BF48A67914ECA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,28 +411,100 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6721AD23D98BF48A67914ECA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCheck/Pods-CryptoCheck-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92B5B545903B73F531514366 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoCheck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACCC4DB7D7CF8AA6CCD4C578 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCheck/Pods-CryptoCheck-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCharts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCheck/Pods-CryptoCheck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		039DF8F51F9C245A0003FA18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A6E5D61FB575810008C4CB /* MineModel.swift in Sources */,
+				0348D3741FB4652C00B9A42B /* SetupAddressCell.swift in Sources */,
+				039F45661FB44B8C00D59C1E /* SetupPortCell.swift in Sources */,
+				03F368F91FB96B2E00A50952 /* PayoutModel.swift in Sources */,
+				03A6E5D41FB574400008C4CB /* WorkerModel.swift in Sources */,
 				038DA9981FB2682300811AD2 /* Utility.swift in Sources */,
+				03A6E5D21FB545C90008C4CB /* MDefaults.swift in Sources */,
+				03BE3BAD1FB2E9F500420EBB /* SetupServerCell.swift in Sources */,
 				03610A7F1FAA3F0A0009D312 /* MDashboardVC.swift in Sources */,
+				0342EEE51FB886640095D4C5 /* WorkerCell.swift in Sources */,
 				03610A7B1FAA34490009D312 /* MPageVC.swift in Sources */,
 				03610A831FAA454C0009D312 /* MTabBarVC.swift in Sources */,
+				03A6E5D81FB578660008C4CB /* MineProtocol.swift in Sources */,
 				039DF8FF1F9C245A0003FA18 /* RootViewController.swift in Sources */,
 				03610A871FB14CD30009D312 /* CryptoModel.swift in Sources */,
 				038DA9A21FB2BF0D00811AD2 /* MSetupPoolVC.swift in Sources */,
+				038B86511FB836F0006324F0 /* MDashboardWorkersVC.swift in Sources */,
 				0349B4BB1FB18FAF0076F8E7 /* SetupCurrencyCell.swift in Sources */,
 				039DF9031F9C245A0003FA18 /* ModelController.swift in Sources */,
 				039DF9011F9C245A0003FA18 /* DataViewController.swift in Sources */,
+				034684C81FB467E100F785D8 /* MSetupAddressVC.swift in Sources */,
+				0342EEE31FB8845B0095D4C5 /* MWorkersTVC.swift in Sources */,
+				03FB03431FB3ED49008CC693 /* MSetupPortVC.swift in Sources */,
 				03610A811FAA3F8D0009D312 /* MCurrencyVC.swift in Sources */,
 				038DA9A41FB2C21700811AD2 /* SetupPoolCell.swift in Sources */,
 				03610A8D1FB159EB0009D312 /* CryptoCompare.swift in Sources */,
+				034684CA1FB50A8300F785D8 /* MSetupAddressNewVC.swift in Sources */,
+				032BB2901FB91E2800874EC6 /* HistoryModel.swift in Sources */,
 				038DA9A01FB2A9D600811AD2 /* ServerModel.swift in Sources */,
 				03610A8B1FB150910009D312 /* MSetupCurrencyVC.swift in Sources */,
 				039DF8FD1F9C245A0003FA18 /* AppDelegate.swift in Sources */,
+				0363268F1FB8EE8800785753 /* SetupModel.swift in Sources */,
+				03FB03411FB3AD70008CC693 /* MSetupServerVC.swift in Sources */,
 				03610A7D1FAA3DEE0009D312 /* MSetupVC.swift in Sources */,
+				03A6E5DA1FB592B40008C4CB /* EthermineAPI.swift in Sources */,
 				038DA99E1FB2A8EC00811AD2 /* PoolModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +669,7 @@
 		};
 		039DF9261F9C245B0003FA18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3F8840CA262D64B24EDF96A /* Pods-CryptoCheck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -510,6 +684,7 @@
 		};
 		039DF9271F9C245B0003FA18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 241AC3C609128EE9C9B779BE /* Pods-CryptoCheck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

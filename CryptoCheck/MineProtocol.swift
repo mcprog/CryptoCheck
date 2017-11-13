@@ -10,8 +10,12 @@ import Foundation
 import UIKit
 protocol MineProtocol {
     
-    func apiCall(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton)
+    func workers(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton)
     
-    func apiSubCall(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton, workers: [WorkerModel])
+    func mine(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton, workers: [WorkerModel])
     
+    
+    func payouts(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton)
+    
+    func history(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton)
 }
