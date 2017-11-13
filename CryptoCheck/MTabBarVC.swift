@@ -34,9 +34,8 @@ class MTabBarVC: UITabBarController {
         if (index >= tabBar.items!.count) {
             return
         }
-        
-        tabBarController?.selectedIndex = index
-        
+        print("setting index (tab) to: \(index)")
+        self.selectedIndex = index
     }
     
 }

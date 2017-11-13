@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031D303C1FBA38E600DA288C /* TabBarChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D303B1FBA38E600DA288C /* TabBarChildVC.swift */; };
+		031D303E1FBA3A3700DA288C /* TabBarChildTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D303D1FBA3A3700DA288C /* TabBarChildTVC.swift */; };
 		032BB2901FB91E2800874EC6 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032BB28F1FB91E2800874EC6 /* HistoryModel.swift */; };
 		0342EEE31FB8845B0095D4C5 /* MWorkersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342EEE21FB8845B0095D4C5 /* MWorkersTVC.swift */; };
 		0342EEE51FB886640095D4C5 /* WorkerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342EEE41FB886640095D4C5 /* WorkerCell.swift */; };
@@ -14,7 +16,6 @@
 		034684CA1FB50A8300F785D8 /* MSetupAddressNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034684C91FB50A8300F785D8 /* MSetupAddressNewVC.swift */; };
 		0348D3741FB4652C00B9A42B /* SetupAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0348D3731FB4652C00B9A42B /* SetupAddressCell.swift */; };
 		0349B4BB1FB18FAF0076F8E7 /* SetupCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349B4BA1FB18FAF0076F8E7 /* SetupCurrencyCell.swift */; };
-		03610A7B1FAA34490009D312 /* MPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A7A1FAA34490009D312 /* MPageVC.swift */; };
 		03610A7D1FAA3DEE0009D312 /* MSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A7C1FAA3DEE0009D312 /* MSetupVC.swift */; };
 		03610A7F1FAA3F0A0009D312 /* MDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A7E1FAA3F0A0009D312 /* MDashboardVC.swift */; };
 		03610A811FAA3F8D0009D312 /* MCurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03610A801FAA3F8D0009D312 /* MCurrencyVC.swift */; };
@@ -36,7 +37,6 @@
 		039DF9161F9C245A0003FA18 /* CryptoCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039DF9151F9C245A0003FA18 /* CryptoCheckTests.swift */; };
 		039DF9211F9C245A0003FA18 /* CryptoCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039DF9201F9C245A0003FA18 /* CryptoCheckUITests.swift */; };
 		039F45661FB44B8C00D59C1E /* SetupPortCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039F45651FB44B8C00D59C1E /* SetupPortCell.swift */; };
-		03A6E5D21FB545C90008C4CB /* MDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6E5D11FB545C90008C4CB /* MDefaults.swift */; };
 		03A6E5D41FB574400008C4CB /* WorkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6E5D31FB574400008C4CB /* WorkerModel.swift */; };
 		03A6E5D61FB575810008C4CB /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6E5D51FB575810008C4CB /* MineModel.swift */; };
 		03A6E5D81FB578660008C4CB /* MineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6E5D71FB578660008C4CB /* MineProtocol.swift */; };
@@ -68,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		018E3ACB2392B637774E8794 /* Pods_CryptoCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		031D303B1FBA38E600DA288C /* TabBarChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarChildVC.swift; sourceTree = "<group>"; };
+		031D303D1FBA3A3700DA288C /* TabBarChildTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarChildTVC.swift; sourceTree = "<group>"; };
 		032BB28F1FB91E2800874EC6 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		0342EEE21FB8845B0095D4C5 /* MWorkersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWorkersTVC.swift; sourceTree = "<group>"; };
 		0342EEE41FB886640095D4C5 /* WorkerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerCell.swift; sourceTree = "<group>"; };
@@ -75,7 +77,6 @@
 		034684C91FB50A8300F785D8 /* MSetupAddressNewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSetupAddressNewVC.swift; sourceTree = "<group>"; };
 		0348D3731FB4652C00B9A42B /* SetupAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAddressCell.swift; sourceTree = "<group>"; };
 		0349B4BA1FB18FAF0076F8E7 /* SetupCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCurrencyCell.swift; sourceTree = "<group>"; };
-		03610A7A1FAA34490009D312 /* MPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPageVC.swift; sourceTree = "<group>"; };
 		03610A7C1FAA3DEE0009D312 /* MSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSetupVC.swift; sourceTree = "<group>"; };
 		03610A7E1FAA3F0A0009D312 /* MDashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDashboardVC.swift; sourceTree = "<group>"; };
 		03610A801FAA3F8D0009D312 /* MCurrencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCurrencyVC.swift; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		039DF9201F9C245A0003FA18 /* CryptoCheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCheckUITests.swift; sourceTree = "<group>"; };
 		039DF9221F9C245A0003FA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		039F45651FB44B8C00D59C1E /* SetupPortCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPortCell.swift; sourceTree = "<group>"; };
-		03A6E5D11FB545C90008C4CB /* MDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDefaults.swift; sourceTree = "<group>"; };
 		03A6E5D31FB574400008C4CB /* WorkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerModel.swift; sourceTree = "<group>"; };
 		03A6E5D51FB575810008C4CB /* MineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
 		03A6E5D71FB578660008C4CB /* MineProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineProtocol.swift; sourceTree = "<group>"; };
@@ -242,10 +242,10 @@
 				039DF90C1F9C245A0003FA18 /* Info.plist */,
 				038DA9971FB2682300811AD2 /* Utility.swift */,
 				03610A8C1FB159EB0009D312 /* CryptoCompare.swift */,
-				03610A7A1FAA34490009D312 /* MPageVC.swift */,
 				03610A821FAA454C0009D312 /* MTabBarVC.swift */,
-				03A6E5D11FB545C90008C4CB /* MDefaults.swift */,
 				031D303A1FBA1D5400DA288C /* API */,
+				031D303B1FBA38E600DA288C /* TabBarChildVC.swift */,
+				031D303D1FBA3A3700DA288C /* TabBarChildTVC.swift */,
 			);
 			path = CryptoCheck;
 			sourceTree = "<group>";
@@ -480,14 +480,14 @@
 				03A6E5D61FB575810008C4CB /* MineModel.swift in Sources */,
 				0348D3741FB4652C00B9A42B /* SetupAddressCell.swift in Sources */,
 				039F45661FB44B8C00D59C1E /* SetupPortCell.swift in Sources */,
+				031D303C1FBA38E600DA288C /* TabBarChildVC.swift in Sources */,
 				03F368F91FB96B2E00A50952 /* PayoutModel.swift in Sources */,
 				03A6E5D41FB574400008C4CB /* WorkerModel.swift in Sources */,
 				038DA9981FB2682300811AD2 /* Utility.swift in Sources */,
-				03A6E5D21FB545C90008C4CB /* MDefaults.swift in Sources */,
+				031D303E1FBA3A3700DA288C /* TabBarChildTVC.swift in Sources */,
 				03BE3BAD1FB2E9F500420EBB /* SetupServerCell.swift in Sources */,
 				03610A7F1FAA3F0A0009D312 /* MDashboardVC.swift in Sources */,
 				0342EEE51FB886640095D4C5 /* WorkerCell.swift in Sources */,
-				03610A7B1FAA34490009D312 /* MPageVC.swift in Sources */,
 				03610A831FAA454C0009D312 /* MTabBarVC.swift in Sources */,
 				03A6E5D81FB578660008C4CB /* MineProtocol.swift in Sources */,
 				03610A871FB14CD30009D312 /* CryptoModel.swift in Sources */,

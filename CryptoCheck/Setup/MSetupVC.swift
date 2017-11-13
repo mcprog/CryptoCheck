@@ -8,13 +8,11 @@
 
 import Foundation
 import UIKit
-class MSetupVC: UITableViewController {
+class MSetupVC: TabBarChildTVC {
     
     @IBOutlet weak var iconCurrency: UIImageView!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var poolLabel: UILabel!
-    @IBOutlet weak var serverLabel: UILabel!
-    @IBOutlet weak var portLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var updateButton: UIButton!
     
@@ -37,8 +35,6 @@ class MSetupVC: UITableViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
         
         if let setup = SetupModel.getObject() {
             print(setup)
@@ -139,9 +135,6 @@ class MSetupVC: UITableViewController {
         print("trying new api call")
         let api = selectedPool?.api
         api?.workers(setup: currentSetup!, tabBarVC: tabBarController!, button: updateButton)
-        //var mine = api?.generateMineModel(address: selectedAddress!, workers: workers!)
-        //print("returned from gen mine")
-        //print(mine)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

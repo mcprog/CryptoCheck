@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import SwiftCharts
-class MDashboardVC: UIViewController {
+class MDashboardVC: TabBarChildVC {
     
     @IBOutlet weak var amtLabel: UILabel!
     @IBOutlet weak var unitsLabel: UILabel!
@@ -202,26 +202,14 @@ class MDashboardVC: UIViewController {
         
     }
     
-    func getMine() -> MineModel {
-        return (tabBarController as! MTabBarVC).mine!
-    }
+    
     
     @IBAction func unwindFromWorkers(segue: UIStoryboardSegue) {
         
     }
     
-    func getHistories() -> [HistoryModel] {
-        return (tabBarController as! MTabBarVC).histories!
-    }
     
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "dashboardWorkersEmbed") {
-            let mDashboardWorkersVC = segue.destination as? MDashboardWorkersVC
-            mine = (tabBarController as! MTabBarVC).mine
-            mDashboardWorkersVC?.count = mine?.workers?.count
-            print("embed called")
-        }
-    }*/
+   
     
 }
