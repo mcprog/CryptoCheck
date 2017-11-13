@@ -4,6 +4,8 @@
 //
 //  Created by Michael Curtis on 10/21/17.
 //  Copyright © 2017 Michael Curtis. All rights reserved.
+//  Right now the I have been testing with only one currency, so the only configuration that works is Ethereum, ethermine.org
+//  You will need an address to test, 
 //
 
 import UIKit
