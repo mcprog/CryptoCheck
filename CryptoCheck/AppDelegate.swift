@@ -5,7 +5,11 @@
 //  Created by Michael Curtis on 10/21/17.
 //  Copyright © 2017 Michael Curtis. All rights reserved.
 //  Right now the I have been testing with only one currency, so the only configuration that works is Ethereum, ethermine.org
-//  You will need an address to test, 
+//  You will need an address to test, I have been using: CAbe2896FeB48a8f1E98d23d7505da426a46eDaA
+//  More addresses can be found at: https://ethermine.org/ under "Recently mined blocks
+//  As  you can see, I have CrptyoCompare api, the Ethermine, the Chart library, and a QR code generator. You can scan the QR code gen and the actual address will showup!
+// I am still missing the kraken api but i think that I am going to focus on the mining aspect over the trading ascpect.
+// Thanks for giving some extra time to work on this (Milestone 3)
 //
 
 import UIKit
