@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0308F0531FDA3F9000150D8F /* DwarfpoolEthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308F0521FDA3F9000150D8F /* DwarfpoolEthAPI.swift */; };
+		0308F06F1FDA8CED00150D8F /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0308F06C1FDA8CB600150D8F /* Charts.framework */; };
+		0308F0701FDA8CED00150D8F /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0308F06C1FDA8CB600150D8F /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		031D303C1FBA38E600DA288C /* TabBarChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D303B1FBA38E600DA288C /* TabBarChildVC.swift */; };
 		031D303E1FBA3A3700DA288C /* TabBarChildTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D303D1FBA3A3700DA288C /* TabBarChildTVC.swift */; };
+		031D30401FBA3F6500DA288C /* NanopoolEthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D303F1FBA3F6500DA288C /* NanopoolEthAPI.swift */; };
 		032BB2901FB91E2800874EC6 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032BB28F1FB91E2800874EC6 /* HistoryModel.swift */; };
 		0342EEE31FB8845B0095D4C5 /* MWorkersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342EEE21FB8845B0095D4C5 /* MWorkersTVC.swift */; };
 		0342EEE51FB886640095D4C5 /* WorkerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342EEE41FB886640095D4C5 /* WorkerCell.swift */; };
@@ -42,7 +46,6 @@
 		03A6E5D81FB578660008C4CB /* MineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6E5D71FB578660008C4CB /* MineProtocol.swift */; };
 		03A6E5DA1FB592B40008C4CB /* EthermineAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6E5D91FB592B40008C4CB /* EthermineAPI.swift */; };
 		03BE3BAD1FB2E9F500420EBB /* SetupServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE3BAC1FB2E9F500420EBB /* SetupServerCell.swift */; };
-		03F368F61FB9357600A50952 /* SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F368F71FB9357600A50952 /* SwiftCharts.framework */; };
 		03F368F91FB96B2E00A50952 /* PayoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F368F81FB96B2D00A50952 /* PayoutModel.swift */; };
 		03FB03411FB3AD70008CC693 /* MSetupServerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB03401FB3AD70008CC693 /* MSetupServerVC.swift */; };
 		03FB03431FB3ED49008CC693 /* MSetupPortVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB03421FB3ED49008CC693 /* MSetupPortVC.swift */; };
@@ -50,6 +53,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0308F0591FDA8C5B00150D8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0308F0541FDA8C5A00150D8F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		0308F05B1FDA8C5B00150D8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0308F0541FDA8C5A00150D8F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		0308F06B1FDA8CB600150D8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0308F0661FDA8CB600150D8F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		0308F06D1FDA8CB600150D8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0308F0661FDA8CB600150D8F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		0308F0711FDA8CED00150D8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0308F0661FDA8CB600150D8F /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A58A4ED274A941CA248EA921;
+			remoteInfo = Charts;
+		};
 		039DF9121F9C245A0003FA18 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 039DF8F11F9C245A0003FA18 /* Project object */;
@@ -66,10 +104,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0308F0731FDA8CED00150D8F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0308F0701FDA8CED00150D8F /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		018E3ACB2392B637774E8794 /* Pods_CryptoCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0308F0521FDA3F9000150D8F /* DwarfpoolEthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DwarfpoolEthAPI.swift; sourceTree = "<group>"; };
+		0308F0541FDA8C5A00150D8F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-3.0.4/Charts.xcodeproj"; sourceTree = "<group>"; };
+		0308F0661FDA8CB600150D8F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-3.0.4/Charts.xcodeproj"; sourceTree = "<group>"; };
 		031D303B1FBA38E600DA288C /* TabBarChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarChildVC.swift; sourceTree = "<group>"; };
 		031D303D1FBA3A3700DA288C /* TabBarChildTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarChildTVC.swift; sourceTree = "<group>"; };
+		031D303F1FBA3F6500DA288C /* NanopoolEthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanopoolEthAPI.swift; sourceTree = "<group>"; };
 		032BB28F1FB91E2800874EC6 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		0342EEE21FB8845B0095D4C5 /* MWorkersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWorkersTVC.swift; sourceTree = "<group>"; };
 		0342EEE41FB886640095D4C5 /* WorkerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerCell.swift; sourceTree = "<group>"; };
@@ -122,7 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03F368F61FB9357600A50952 /* SwiftCharts.framework in Frameworks */,
+				0308F06F1FDA8CED00150D8F /* Charts.framework in Frameworks */,
 				F4F6CCEE2B2805734FC5C5CF /* Pods_CryptoCheck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +200,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0308F0551FDA8C5A00150D8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0308F05A1FDA8C5B00150D8F /* Charts.framework */,
+				0308F05C1FDA8C5B00150D8F /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0308F0671FDA8CB600150D8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0308F06C1FDA8CB600150D8F /* Charts.framework */,
+				0308F06E1FDA8CB600150D8F /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0317EB931FB83EE900380BD8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +242,8 @@
 			children = (
 				03A6E5D71FB578660008C4CB /* MineProtocol.swift */,
 				03A6E5D91FB592B40008C4CB /* EthermineAPI.swift */,
+				031D303F1FBA3F6500DA288C /* NanopoolEthAPI.swift */,
+				0308F0521FDA3F9000150D8F /* DwarfpoolEthAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -209,6 +285,7 @@
 		039DF8F01F9C245A0003FA18 = {
 			isa = PBXGroup;
 			children = (
+				0308F0661FDA8CB600150D8F /* Charts.xcodeproj */,
 				039DF8FB1F9C245A0003FA18 /* CryptoCheck */,
 				039DF9141F9C245A0003FA18 /* CryptoCheckTests */,
 				039DF91F1F9C245A0003FA18 /* CryptoCheckUITests */,
@@ -271,6 +348,7 @@
 		A1EFDD539E231358F43482D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0308F0541FDA8C5A00150D8F /* Charts.xcodeproj */,
 				03F368F71FB9357600A50952 /* SwiftCharts.framework */,
 				018E3ACB2392B637774E8794 /* Pods_CryptoCheck.framework */,
 			);
@@ -299,10 +377,12 @@
 				039DF8F71F9C245A0003FA18 /* Resources */,
 				ACCC4DB7D7CF8AA6CCD4C578 /* [CP] Embed Pods Frameworks */,
 				6721AD23D98BF48A67914ECA /* [CP] Copy Pods Resources */,
+				0308F0731FDA8CED00150D8F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0308F0721FDA8CED00150D8F /* PBXTargetDependency */,
 			);
 			name = CryptoCheck;
 			productName = CryptoCheck;
@@ -382,6 +462,16 @@
 			mainGroup = 039DF8F01F9C245A0003FA18;
 			productRefGroup = 039DF8FA1F9C245A0003FA18 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0308F0671FDA8CB600150D8F /* Products */;
+					ProjectRef = 0308F0661FDA8CB600150D8F /* Charts.xcodeproj */;
+				},
+				{
+					ProductGroup = 0308F0551FDA8C5A00150D8F /* Products */;
+					ProjectRef = 0308F0541FDA8C5A00150D8F /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				039DF8F81F9C245A0003FA18 /* CryptoCheck */,
@@ -390,6 +480,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0308F05A1FDA8C5B00150D8F /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 0308F0591FDA8C5B00150D8F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0308F05C1FDA8C5B00150D8F /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 0308F05B1FDA8C5B00150D8F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0308F06C1FDA8CB600150D8F /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 0308F06B1FDA8CB600150D8F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0308F06E1FDA8CB600150D8F /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 0308F06D1FDA8CB600150D8F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		039DF8F71F9C245A0003FA18 /* Resources */ = {
@@ -477,6 +598,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031D30401FBA3F6500DA288C /* NanopoolEthAPI.swift in Sources */,
 				03A6E5D61FB575810008C4CB /* MineModel.swift in Sources */,
 				0348D3741FB4652C00B9A42B /* SetupAddressCell.swift in Sources */,
 				039F45661FB44B8C00D59C1E /* SetupPortCell.swift in Sources */,
@@ -494,6 +616,7 @@
 				038DA9A21FB2BF0D00811AD2 /* MSetupPoolVC.swift in Sources */,
 				038B86511FB836F0006324F0 /* MDashboardWorkersVC.swift in Sources */,
 				0349B4BB1FB18FAF0076F8E7 /* SetupCurrencyCell.swift in Sources */,
+				0308F0531FDA3F9000150D8F /* DwarfpoolEthAPI.swift in Sources */,
 				034684C81FB467E100F785D8 /* MSetupAddressVC.swift in Sources */,
 				0342EEE31FB8845B0095D4C5 /* MWorkersTVC.swift in Sources */,
 				03FB03431FB3ED49008CC693 /* MSetupPortVC.swift in Sources */,
@@ -532,6 +655,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0308F0721FDA8CED00150D8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 0308F0711FDA8CED00150D8F /* PBXContainerItemProxy */;
+		};
 		039DF9131F9C245A0003FA18 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 039DF8F81F9C245A0003FA18 /* CryptoCheck */;
@@ -675,6 +803,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3F8840CA262D64B24EDF96A /* Pods-CryptoCheck.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CryptoCheck/Info.plist;
@@ -690,6 +819,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 241AC3C609128EE9C9B779BE /* Pods-CryptoCheck.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CryptoCheck/Info.plist;
