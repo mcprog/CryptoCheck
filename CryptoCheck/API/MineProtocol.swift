@@ -18,4 +18,6 @@ protocol MineProtocol {
     func payouts(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton)
     
     func history(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton)
+    
+    
 }

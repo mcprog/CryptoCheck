@@ -163,6 +163,7 @@ struct EthermineAPI : MineProtocol {
     func workers(setup: SetupModel, tabBarVC: UITabBarController, button: UIButton) {
         let baseUrl = "https://api.ethermine.org/miner/"
         let workerUrlString = URL(string: baseUrl + setup.address + "/workers")
+        
         if let workerUrl = workerUrlString {
             let workerTask = URLSession.shared.dataTask(with: workerUrl) {
                 (data, response, error) in

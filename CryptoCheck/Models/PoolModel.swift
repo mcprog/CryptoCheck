@@ -23,7 +23,7 @@ class PoolModel {
     static let btcPools = [PoolModel]()
     static let ethPools = [
         PoolModel(name: "ethermine.org", cryptoModel: CryptoModel.eth, api: EthermineAPI()),
-        PoolModel(name: "nanopool.org", cryptoModel: CryptoModel.eth, api: EthermineAPI())
+        PoolModel(name: "dwarfpool.com", cryptoModel: CryptoModel.eth, api: EthermineAPI())
     ]
     static let ltcPools = [PoolModel]()
     static let xmrPools = [PoolModel]()

@@ -126,6 +126,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VER-ww-wo3" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="25" y="377" width="324" height="206"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -137,6 +141,7 @@
                             <constraint firstItem="mUt-wM-Y3f" firstAttribute="bottom" secondItem="um7-ZY-Igh" secondAttribute="bottom" constant="-8" id="6wy-Cg-MJK"/>
                             <constraint firstItem="37g-sC-f6J" firstAttribute="centerY" secondItem="AD5-Lj-adF" secondAttribute="centerY" id="Bpo-X0-gaH"/>
                             <constraint firstItem="hnm-R4-f8y" firstAttribute="centerX" secondItem="um7-ZY-Igh" secondAttribute="centerX" id="CfE-z7-ybg"/>
+                            <constraint firstItem="VER-ww-wo3" firstAttribute="centerX" secondItem="feH-BV-lC1" secondAttribute="centerX" id="D6z-wH-nyH"/>
                             <constraint firstItem="um7-ZY-Igh" firstAttribute="leading" secondItem="AX3-X8-ZmI" secondAttribute="leading" id="GKK-5I-d0X"/>
                             <constraint firstItem="D0J-Hu-2I3" firstAttribute="centerX" secondItem="feH-BV-lC1" secondAttribute="centerX" id="HfR-7z-UcG"/>
                             <constraint firstItem="cim-z3-ygY" firstAttribute="width" secondItem="37g-sC-f6J" secondAttribute="width" id="IJX-vI-QZj"/>
@@ -163,6 +168,7 @@
                             <constraint firstItem="Pt2-1p-8pt" firstAttribute="bottom" secondItem="um7-ZY-Igh" secondAttribute="bottom" constant="-8" id="eGO-PF-2w6"/>
                             <constraint firstItem="um7-ZY-Igh" firstAttribute="leading" secondItem="mUt-wM-Y3f" secondAttribute="trailing" constant="-129" id="fXQ-jT-otO"/>
                             <constraint firstItem="D0J-Hu-2I3" firstAttribute="top" secondItem="NXv-mK-efJ" secondAttribute="bottom" constant="25" id="g6v-TS-Iy3"/>
+                            <constraint firstItem="VER-ww-wo3" firstAttribute="top" secondItem="um7-ZY-Igh" secondAttribute="bottom" constant="8" id="jYt-sa-MtM"/>
                             <constraint firstItem="NXv-mK-efJ" firstAttribute="top" secondItem="AD5-Lj-adF" secondAttribute="bottom" constant="8" id="kpz-Mx-4xN"/>
                             <constraint firstItem="Pt2-1p-8pt" firstAttribute="width" secondItem="YJi-aa-95a" secondAttribute="width" id="oTw-O5-XPv"/>
                             <constraint firstItem="cim-z3-ygY" firstAttribute="leading" secondItem="feH-BV-lC1" secondAttribute="leading" constant="25" id="oek-fw-uNZ"/>
@@ -172,7 +178,9 @@
                             <constraint firstItem="AX3-X8-ZmI" firstAttribute="width" secondItem="YJi-aa-95a" secondAttribute="width" id="shT-59-c7X"/>
                             <constraint firstItem="Rt7-1p-n4t" firstAttribute="top" secondItem="FAJ-Cj-Mwa" secondAttribute="bottom" constant="8" id="w8c-4p-lbl"/>
                             <constraint firstItem="ZJu-2o-2FA" firstAttribute="width" secondItem="YJi-aa-95a" secondAttribute="width" id="wwD-nf-Wnx"/>
+                            <constraint firstItem="VER-ww-wo3" firstAttribute="leading" secondItem="feH-BV-lC1" secondAttribute="leading" constant="25" id="xEN-NV-rcE"/>
                             <constraint firstItem="NXv-mK-efJ" firstAttribute="centerX" secondItem="feH-BV-lC1" secondAttribute="centerX" id="xRQ-zd-Zze"/>
+                            <constraint firstItem="feH-BV-lC1" firstAttribute="bottom" secondItem="VER-ww-wo3" secondAttribute="bottom" constant="35" id="yst-b9-E8a"/>
                             <constraint firstItem="Pt2-1p-8pt" firstAttribute="trailing" secondItem="um7-ZY-Igh" secondAttribute="trailing" id="z3c-t4-p7e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="feH-BV-lC1"/>
@@ -184,6 +192,7 @@
                         <outlet property="amtLabel" destination="FAJ-Cj-Mwa" id="34E-k3-lDe"/>
                         <outlet property="blackView" destination="um7-ZY-Igh" id="SQt-5B-vHw"/>
                         <outlet property="cHashLabel" destination="ZJu-2o-2FA" id="0Hg-Rr-L3E"/>
+                        <outlet property="chartView" destination="VER-ww-wo3" id="yBx-v8-XBS"/>
                         <outlet property="rHashLabel" destination="AX3-X8-ZmI" id="pXY-6e-tsV"/>
                         <outlet property="unitsLabel" destination="Rt7-1p-n4t" id="Dxs-uf-nj0"/>
                     </connections>
@@ -784,8 +793,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please select an address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFu-iz-zp7">
-                                                    <rect key="frame" x="49" y="33" width="281" height="25"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                                    <rect key="frame" x="49" y="33" width="281" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
                                                     <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1167,8 +1176,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZw-iT-Ips">
-                                            <rect key="frame" x="25" y="10" width="325" height="25"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                            <rect key="frame" x="25" y="13.5" width="325" height="18"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1266,7 +1275,7 @@
                                 <rect key="frame" x="25" y="49" width="325" height="30"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="8yT-fd-wDO" id="nyB-gt-xaK"/>
